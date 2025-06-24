@@ -1,0 +1,29 @@
+name: Deploy Flutter Web to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # push 到 main 分支就會觸發部署
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '3.22.0'  # 換成你本機用的 Flutter 版本
+
+    - name: Install dependencies
+      run: flutter pub get
+
+    - name: Build Web
+      run: flutter build web
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: build/web
