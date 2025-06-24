@@ -37,7 +37,7 @@ jobs:
 
       - name: Upload artifact
         # 上傳構建好的 web 應用程式作為 GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
           # 告訴它你的靜態網站檔案在哪裡
           path: flutter_application_1/build/web/ # 確保這是你 Flutter 構建輸出的正確路徑
