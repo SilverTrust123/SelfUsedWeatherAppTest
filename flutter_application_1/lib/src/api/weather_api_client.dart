@@ -20,7 +20,7 @@ class WeatherApiClient {
     };
 
     return Uri(
-      scheme: 'http',
+      scheme: 'https',
       host: baseUrl,
       path: 'data/2.5/$endpoint',
       queryParameters: query,

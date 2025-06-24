@@ -78951,7 +78951,7 @@ A.ajn.prototype={
 BK(a,b){var s=A.u(t.N,t.z)
 s.n(0,"appid",this.a)
 s.M(0,b)
-return A.GM(null,"api.openweathermap.org","data/2.5/"+a,s,"http")},
+return A.GM(null,"api.openweathermap.org","data/2.5/"+a,s,"https")},
 vl(a,b){return this.WT(a,b)},
 WT(a,b){var s=0,r=A.R(t.N),q,p=this,o,n
 var $async$vl=A.N(function(c,d){if(c===1)return A.O(d,r)
