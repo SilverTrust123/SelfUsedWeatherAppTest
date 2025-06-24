@@ -25,11 +25,12 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
-      - name: Build Flutter Web
-        run: flutter build web
+      - name: Build Flutter Web with base href
+        run: flutter build web --base-href="/SelfUsedWeatherAppTest/"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
           publish_dir: flutter_application_1/build/web
