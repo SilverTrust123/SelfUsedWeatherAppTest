@@ -3,8 +3,7 @@ name: Deploy Flutter Web to GitHub Pages
 on:
   push:
     branches:
-      - master
-
+      - master # 當你推送到 master 分支時觸發
 
 jobs:
   build:
@@ -12,7 +11,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: flutter_application_1
+        working-directory: flutter_application_1 # 指定 Flutter 專案的工作目錄
 
     steps:
       - name: Checkout repository
@@ -21,17 +20,31 @@ jobs:
       - name: Setup Flutter SDK
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.27.3'
+          channel: 'stable' # 建議使用 stable 頻道
+          flutter-version: '3.27.3' # 指定 Flutter 版本
 
       - name: Install dependencies
         run: flutter pub get
 
       - name: Build Flutter Web with base href
-        run: flutter build web --base-href="/SelfUsedWeatherAppTest/"
+        # 注意：--release 是發布版本，可以讓性能更好，檔案更小
+        # --base-href="/SelfUsedWeatherAppTest/" 保持不變，這對於路由仍然重要
+        run: flutter build web --release --base-href="/SelfUsedWeatherAppTest/"
+
+      - name: Setup Pages
+        # 使用 GitHub 官方的 setup-pages action 來設定部署環境
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        # 上傳構建好的 web 應用程式作為 GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          # 告訴它你的靜態網站檔案在哪裡
+          path: flutter_application_1/build/web/ # 確保這是你 Flutter 構建輸出的正確路徑
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: flutter_application_1/build/web
+        # 使用 GitHub 官方的 deploy-pages action 來部署上傳的 artifact
+        id: deployment
+        uses: actions/deploy-pages@v4
+        # 這裡不需要 github_token 或 publish_branch，因為它會自動處理
+        # 根據你上傳的 artifact 進行部署
