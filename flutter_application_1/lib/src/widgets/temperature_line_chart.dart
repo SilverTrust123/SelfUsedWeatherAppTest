@@ -68,7 +68,7 @@ class TemperatureLineChart extends StatelessWidget {
                       tickFormatterSpec: charts.AutoDateTimeTickFormatterSpec(
                         day: charts.TimeFormatterSpec(
                           format: 'MM/dd',
-                          transitionFormat: 'MM/dd/yyyy',
+                          transitionFormat: 'MM/dd',
                         ),
                         hour: charts.TimeFormatterSpec(
                           format: 'HH:mm',
