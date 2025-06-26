@@ -69,7 +69,7 @@ class _WeatherScreenState extends State<WeatherScreen>
         actions: <Widget>[
           PopupMenuButton<OptionsMenu>(
             child: Icon(
-              Icons.more_horiz,
+              Icons.brightness_4,
               color: appTheme.colorScheme
                   .secondary, // Change accentColor to colorScheme.secondary
             ),
