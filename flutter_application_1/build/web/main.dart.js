@@ -80172,7 +80172,7 @@ r=B.c.a8(m.Q.tp(0,k))
 q=B.c.a8(m.as.tp(0,k))
 p=l.ax.y
 o=t.D
-return A.mh(A.b([A.mw(m.IS(),p,n,70),A.fg(n,20,n),A.cB(""+s+"\xb0",n,n,n,A.cJ(n,n,p,n,n,n,n,n,n,n,n,100,n,n,B.iQ,n,n,!0,n,n,n,n,n,n,n,n),n,n),A.ne(A.b([new A.k7("max",""+r+"\xb0",n,n),new A.c8(B.fq,A.fa(A.dS(n,B.r,A.ao(50,p.gl(0)>>>16&255,p.gl(0)>>>8&255,p.gl(0)&255),n,n,30,n,n,n,1),n,n),n),new A.k7("min",""+q+"\xb0",n,n)],o),B.a9,n,B.bQ,B.ba)],o),B.a9,n,B.bQ,B.ba)}}
+return A.mh(A.b([A.mw(m.IS(),p,n,60),A.fg(n,20,n),A.cB(""+s+"\xb0",n,n,n,A.cJ(n,n,p,n,n,n,n,n,n,n,n,100,n,n,B.iQ,n,n,!0,n,n,n,n,n,n,n,n),n,n),A.ne(A.b([new A.k7("max",""+r+"\xb0",n,n),new A.c8(B.fq,A.fa(A.dS(n,B.r,A.ao(50,p.gl(0)>>>16&255,p.gl(0)>>>8&255,p.gl(0)&255),n,n,30,n,n,n,1),n,n),n),new A.k7("min",""+q+"\xb0",n,n)],o),B.a9,n,B.bQ,B.ba)],o),B.a9,n,B.bQ,B.ba)}}
 A.Kw.prototype={
 K(a){return B.ar}}
 A.KZ.prototype={

@@ -26,7 +26,7 @@ class CurrentConditions extends StatelessWidget {
         Icon(
           weather.getIconData(),
           color: appTheme.colorScheme.secondary,
-          size: 70,
+          size: 60,
         ),
         SizedBox(
           height: 20,
