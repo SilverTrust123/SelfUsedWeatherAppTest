@@ -33,7 +33,7 @@ class ValueTile extends StatelessWidget {
                 .theme
                 .colorScheme
                 .secondary
-                .withAlpha(0),
+                .withAlpha(150),
           ),
         ),
         SizedBox(height: 5),
