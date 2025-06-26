@@ -30,7 +30,7 @@ class ForecastHorizontal extends StatelessWidget {
           shrinkWrap: true,
           itemCount: this.weathers.length,
           separatorBuilder: (context, index) => Divider(
-            height: 100,
+            height: 70,
             color: Colors.white,
           ),
           padding: EdgeInsets.only(left: 10, right: 10),

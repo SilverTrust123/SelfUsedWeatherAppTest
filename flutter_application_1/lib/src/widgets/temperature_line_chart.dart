@@ -54,7 +54,7 @@ class TemperatureLineChart extends StatelessWidget {
                       renderSpec: charts.GridlineRendererSpec(
                         labelStyle: charts.TextStyleSpec(
                           fontSize: 20,
-                          color: charts.MaterialPalette.black,
+                          color: charts.MaterialPalette.white,
                         ),
                         lineStyle: charts.LineStyleSpec(
                           thickness: 2,
@@ -78,7 +78,7 @@ class TemperatureLineChart extends StatelessWidget {
                       renderSpec: charts.SmallTickRendererSpec(
                         labelStyle: charts.TextStyleSpec(
                           fontSize: 20,
-                          color: charts.MaterialPalette.black,
+                          color: charts.MaterialPalette.white,
                         ),
                         lineStyle: charts.LineStyleSpec(
                           thickness: 2,
