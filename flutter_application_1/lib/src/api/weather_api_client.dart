@@ -19,7 +19,7 @@ class WeatherApiClient {
     return Uri(
       scheme: 'https', // 使用 HTTPS
       host: vercelBaseUrl,
-      path: 'api/$apiPath', // 指向你的 weather.js 所在的 /api 目錄
+      path: 'api/weather', // 指向你的 weather.js 所在的 /api 目錄
       queryParameters: queryParameters,
     );
   }
