@@ -1,0 +1,10 @@
+{
+  "name": "weather-api-function",
+  "version": "1.0.0",
+  "description": "Vercel Serverless Function for OpenWeatherMap API",
+  "main": "weather.js",
+  "dependencies": {
+    "axios": "^1.0.0"
+  },
+  "private": true
+}
