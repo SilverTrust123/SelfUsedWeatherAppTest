@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_application_1/src/api/api_keys.dart';
+// import 'package:flutter_application_1/src/api/api_keys.dart';
 import 'package:flutter_application_1/src/bloc/weather_bloc_observre.dart';
 import 'package:flutter_application_1/src/screens/routes.dart';
 import 'package:flutter_application_1/src/screens/weather_screen.dart';
@@ -23,7 +23,7 @@ void main() {
   final WeatherRepository weatherRepository = WeatherRepository(
     weatherApiClient: WeatherApiClient(
       httpClient: http.Client(),
-      apiKey: ApiKey.OPEN_WEATHER_MAP,
+      // apiKey: ApiKey.OPEN_WEATHER_MAP,
     ),
   );
 

@@ -99,13 +99,15 @@ class Weather {
       case '02d':
         return WeatherIcons.few_clouds_day;
       case '02n':
-        return WeatherIcons.few_clouds_day;
+        // 修正：02n 應該對應到夜間的「少雲」圖示
+        return WeatherIcons.few_clouds_night;
       case '03d':
       case '04d':
         return WeatherIcons.clouds_day;
       case '03n':
       case '04n':
-        return WeatherIcons.clear_night;
+        // 修正：03n 和 04n 應該對應到夜間的「多雲」圖示
+        return WeatherIcons.clouds_night;
       case '09d':
         return WeatherIcons.shower_rain_day;
       case '09n':
@@ -127,6 +129,7 @@ class Weather {
       case '50n':
         return WeatherIcons.mist_night;
       default:
+        // 預設值，例如當iconCode不匹配任何已知情況時
         return WeatherIcons.clear_day;
     }
   }
