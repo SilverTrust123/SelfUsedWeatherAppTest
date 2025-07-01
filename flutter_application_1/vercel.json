@@ -1,17 +1,10 @@
 {
-  "builds": [
-    {
-      "src": "pubspec.yaml",
-      "use": "@vercel/flutter@0.1.0",
-      "config": {
-        "outputDirectory": "build/web"
-      }
-    },
-    {
-      "src": "api/**/*.js",
-      "use": "@vercel/node"
+  "buildCommand": "cd flutter_application_1 && flutter build web",
+  "functions": {
+    "api/**/*.js": {
+      "runtime": "@vercel/node"
     }
-  ],
+  },
   "routes": [
     {
       "src": "/api/(.*)",
@@ -19,7 +12,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "build/web/$1"
+      "dest": "/flutter_application_1/build/web/$1"
     }
   ]
 }
