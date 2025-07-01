@@ -7,7 +7,7 @@ class WeatherApiClient {
   // 將 baseUrl 改為你的 Vercel Serverless Function 的 URL
   // 例如：'your-app-name.vercel.app' 或 'localhost:3000' (本地開發時)
   static const String vercelBaseUrl =
-      'https://self-used-weather-app-test.vercel.app/'; // <--- 請替換成你的 Vercel 應用程式網域
+      'self-used-weather-app-test.vercel.app'; // <--- 請替換成你的 Vercel 應用程式網域
   final http.Client httpClient;
 
   // 構造函數不再需要 apiKey
