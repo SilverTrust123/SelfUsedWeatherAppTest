@@ -15,15 +15,15 @@ double intToDouble(dynamic val) {
 enum TemperatureUnit { kelvin, celsius, fahrenheit }
 
 class Temperature {
-  final double _kelvin;
+  final double _celsius;
 
-  Temperature(this._kelvin);
+  Temperature(this._celsius);
 
-  double get kelvin => _kelvin;
+  double get celsius => _celsius;
 
-  double get celsius => _kelvin - 273.15;
+  double get kelvin => _celsius + 273.15;
 
-  double get fahrenheit => _kelvin * 9 / 5 - 459.67;
+  double get fahrenheit => _celsius * 9 / 5 + 32;
 
   double as(TemperatureUnit unit) {
     switch (unit) {
